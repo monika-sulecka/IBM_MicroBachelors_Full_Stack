@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello User</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+    }
+    #greeting {
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enter your name:</h2>
+  <input type="text" id="username" placeholder="Your name" />
+  <button onclick="sayHello()">Say Hello</button>
+
+  <div id="greeting"></div>
+
+  <script>
+    function sayHello() {
+      const name = document.getElementById("username").value.trim();
+      const output = document.getElementById("greeting");
+
+      if (name) {
+        output.textContent = `Hello, ${name}!`;
+      } else {
+        output.textContent = "Please enter your name.";
+      }
+    }
+  </script>
+
+</body>
+</html>
